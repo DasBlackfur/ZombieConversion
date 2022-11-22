@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "zombieconversion",
+  "version": "${version}",
+  "name": "Zombie Conversion",
+  "description": "A simple mod that guarantees a zombie villager conversion on any difficulty.",
+  "authors": [
+    "DasBlackfur"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/zombieconversion/icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "me.blackfur.zombieconversion.Zombieconversion"
+    ]
+  },
+  "mixins": [
+    "zombieconversion.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.10",
+    "fabric": "*",
+    "minecraft": "1.18.2"
+  }
+}
