@@ -10,7 +10,7 @@
   "contact": {},
   "license": "MIT",
   "icon": "assets/zombieconversion/icon.png",
-  "environment": "server",
+  "environment": "*",
   "entrypoints": {
     "main": [
       "me.blackfur.zombieconversion.Zombieconversion"
