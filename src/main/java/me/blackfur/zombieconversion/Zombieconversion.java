@@ -8,6 +8,6 @@ public class Zombieconversion implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        GUARANTEED_CONVERSION = GameRules.register("guaranteedConversion", GameRules.BooleanRule.of(false));
+        GUARANTEED_CONVERSION = GameRules.register("guaranteedConversion", GameRules.BooleanRule.create(false));
     }
 }

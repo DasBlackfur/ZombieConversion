@@ -22,7 +22,7 @@
   "depends": {
     "fabricloader": ">=0.14.10",
     "fabric": "*",
-    "minecraft": "1.14.4"
+    "minecraft": "1.15.2"
   },
   "accessWidener": "zombieconversion.accesswidener"
 }
