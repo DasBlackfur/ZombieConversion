@@ -11,7 +11,7 @@ import static me.blackfur.zombieconversion.Zombieconversion.GUARANTEED_CONVERSIO
 
 @Mixin(ZombieEntity.class)
 public class ZombieConversionMixin {
-    @Redirect(method = "onKilledOther(Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/entity/LivingEntity;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/world/ServerWorld;getDifficulty()Lnet/minecraft/world/Difficulty;"))
+    @Redirect(method = "onKilledOther", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/world/ServerWorld;getDifficulty()Lnet/minecraft/world/Difficulty;"))
     private Difficulty injected(ServerWorld serverWorld) {
         if (serverWorld.getGameRules().getBoolean(GUARANTEED_CONVERSION)) {
             return Difficulty.HARD;
