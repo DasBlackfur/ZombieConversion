@@ -5,7 +5,7 @@ import net.fabricmc.fabric.api.gamerule.v1.GameRuleFactory;
 import net.fabricmc.fabric.api.gamerule.v1.GameRuleRegistry;
 import net.minecraft.world.GameRules;
 
-public class Zombieconversion implements ModInitializer {
+public class ZombieConversion implements ModInitializer {
     public static GameRules.Key<GameRules.BooleanRule> GUARANTEED_CONVERSION;
 
     @Override

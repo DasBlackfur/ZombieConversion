@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
-import static me.blackfur.zombieconversion.Zombieconversion.GUARANTEED_CONVERSION;
+import static me.blackfur.zombieconversion.ZombieConversion.GUARANTEED_CONVERSION;
 
 @Mixin(ZombieEntity.class)
 public class ZombieConversionMixin {
