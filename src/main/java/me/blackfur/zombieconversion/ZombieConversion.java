@@ -6,7 +6,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.rule.GameRule;
 
 public class ZombieConversion implements ModInitializer {
-    public static final GameRule<Boolean> GUARANTEED_CONVERSION = GameRuleBuilder.forBoolean(false).buildAndRegister(Identifier.of("zombieconversion", "guaranteed_conversion"));
+    public static final GameRule<ConversionSetting> GUARANTEED_CONVERSION = GameRuleBuilder.forEnum(ConversionSetting.VANILLA).buildAndRegister(Identifier.of("zombieconversion", "guaranteed_conversion"));
     @Override
     public void onInitialize() {
     }

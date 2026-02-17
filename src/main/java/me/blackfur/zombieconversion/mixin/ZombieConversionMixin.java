@@ -1,5 +1,6 @@
 package me.blackfur.zombieconversion.mixin;
 
+import me.blackfur.zombieconversion.ConversionSetting;
 import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.Difficulty;
@@ -13,8 +14,11 @@ import static me.blackfur.zombieconversion.ZombieConversion.GUARANTEED_CONVERSIO
 public class ZombieConversionMixin {
     @Redirect(method = "onKilledOther", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/world/ServerWorld;getDifficulty()Lnet/minecraft/world/Difficulty;"))
     private Difficulty injected(ServerWorld serverWorld) {
-        if (serverWorld.getGameRules().getValue(GUARANTEED_CONVERSION)) {
+        var gameRuleSetting = serverWorld.getGameRules().getValue(GUARANTEED_CONVERSION);
+        if (gameRuleSetting == ConversionSetting.ALWAYS) {
             return Difficulty.HARD;
+        } else if (gameRuleSetting == ConversionSetting.NEVER) {
+            return Difficulty.EASY;
         }
         return serverWorld.getDifficulty();
     }
